@@ -148,6 +148,11 @@ textarea {
   color: var(--blue-dark);
 }
 
+.nav-link[aria-current="page"] {
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+}
+
 .button {
   display: inline-flex;
   min-height: 3.1rem;
@@ -434,6 +439,209 @@ textarea {
 .services-grid {
   display: grid;
   gap: 1rem;
+}
+
+.service-preview .service-card ul {
+  display: none;
+}
+
+.section-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home-about {
+  background: var(--surface);
+}
+
+.home-about-layout {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.home-about-number {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  border-left: 3px solid var(--blue);
+  padding: 1rem 1.4rem;
+}
+
+.home-about-number strong {
+  color: var(--blue);
+  font-family: var(--display-font);
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+
+.home-about-number strong span {
+  font-size: 2rem;
+}
+
+.home-about-number p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.83rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.home-about-copy {
+  max-width: 39rem;
+}
+
+.home-about-copy h2,
+.home-cta h2 {
+  margin: 0.85rem 0 0;
+  font-family: var(--display-font);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.18;
+}
+
+.home-about-copy > p:not(.eyebrow) {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.text-link-dark {
+  color: var(--blue-dark);
+}
+
+.home-cta {
+  background:
+    radial-gradient(circle at 85% 15%, #7191b533 0, transparent 28%),
+    #17283e;
+  color: #fff;
+}
+
+.home-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.home-cta h2 {
+  max-width: 43rem;
+}
+
+.home-cta-inner > div > p:not(.eyebrow) {
+  max-width: 38rem;
+  margin: 0.9rem 0 0;
+  color: #c3cedb;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.button-white {
+  background: #fff;
+  color: var(--blue-dark);
+}
+
+.button-white:hover {
+  background: #eaf0f6;
+}
+
+.page-hero {
+  background:
+    radial-gradient(ellipse at 82% 30%, rgb(49 90 135 / 10%), transparent 32%),
+    linear-gradient(110deg, #f8fafc, #f0f3f7);
+}
+
+.page-hero-inner {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.page-hero h1 {
+  max-width: 52rem;
+  margin: 1rem 0 0;
+  font-family: var(--display-font);
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.08;
+}
+
+.page-hero h1 span {
+  color: var(--blue);
+}
+
+.page-hero-inner > p:not(.eyebrow) {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.page-hero .button {
+  margin-top: 1.5rem;
+}
+
+.page-hero-compact .page-hero-inner {
+  padding-top: 3.7rem;
+  padding-bottom: 3.7rem;
+}
+
+.quote-card > h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display-font);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.quote-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  background: var(--surface);
+  padding: 0.9rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.quote-contact-card p {
+  margin: 0;
+}
+
+.quote-contact-card strong {
+  color: var(--ink);
+}
+
+.quote-contact-icon {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-family: var(--display-font);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.commitment-button {
+  margin-top: 1.25rem;
 }
 
 .service-card {
@@ -856,6 +1064,22 @@ textarea.form-control {
   font-weight: 800;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.3rem;
+}
+
+.footer-links a {
+  color: #536176;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: var(--blue-dark);
+}
+
 .footer-bottom {
   border-top: 1px solid #dfe5ec;
 }
@@ -882,6 +1106,21 @@ textarea.form-control {
 
   .quote-card {
     padding: 1.75rem;
+  }
+
+  .home-about-layout {
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .home-cta-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
 
   .footer-main,

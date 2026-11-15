@@ -21,6 +21,11 @@ function renderServiceOptions() {
     option.textContent = service.name;
     serviceSelect.append(option);
   }
+
+  const requestedService = new URLSearchParams(window.location.search).get("servicio");
+  if (services.some((service) => service.name === requestedService)) {
+    serviceSelect.value = requestedService;
+  }
 }
 
 function handleSubmit(event) {

@@ -5,7 +5,11 @@ function renderServices() {
   const container = document.querySelector("#services-grid");
   if (!container) return;
 
-  const cards = services.map((service, index) => {
+  const serviceLimit = Number.parseInt(container.dataset.serviceLimit, 10);
+  const visibleServices = Number.isInteger(serviceLimit) && serviceLimit > 0
+    ? services.slice(0, serviceLimit)
+    : services;
+  const cards = visibleServices.map((service, index) => {
     const article = document.createElement("article");
     article.className = "service-card";
 
@@ -28,7 +32,7 @@ function renderServices() {
     }
 
     const link = document.createElement("a");
-    link.href = "#cotizacion";
+    link.href = `cotizacion.html?servicio=${encodeURIComponent(service.name)}`;
     link.innerHTML = 'Solicitar cotización <span aria-hidden="true">→</span>';
 
     article.append(number, title, description, details, link);
